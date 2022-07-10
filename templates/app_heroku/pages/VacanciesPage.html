@@ -5,7 +5,7 @@
 {% block head %}{% endblock head %}
 
 {% block title %}
-    Страница с вакансиями
+    Вакансия
 {% endblock title %}
 
 {% block navbar %}
@@ -49,13 +49,21 @@
 
                     <ul>
                         {% for vacancie in vacancies %}
-                            <li class="text-end">
-                                <div>
-                                    <h6><a href="{{ vacancie.alternate_url }}">{{ vacancie.name }}</a></h6>
-                                    <div class="small fw-bold">от {{ vacancie.salary.from }}  и до {{ vacancie.salary.to }} {{ vacancie.salary.currency }}</div>
-                                </div>
-                            </li>
-                            {{ vacancie }}
+                            <table class="table text-center">
+                              <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col"><a href="{{ vacancie.alternate_url }}">{{ vacancie.name }}</a></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row"></th>
+                                  <td>от {{ vacancie.salary.from }}  и до {{ vacancie.salary.to }} {{ vacancie.salary.currency }}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+
                         {% endfor %}
                     </ul>
 

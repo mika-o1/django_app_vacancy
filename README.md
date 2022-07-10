@@ -1,8 +1,5 @@
-# django-app-heroku
-Simple example Django MVT(Model-View-Template) for Heroku
+# django-app-vacancy
 
-#### The App has 4 features:
-- **Task list**
-- **Create**
-- **Update**
-- **Delete**
+#### The App has 2 features:
+- **Get Vacancy**
+- **Parser**
